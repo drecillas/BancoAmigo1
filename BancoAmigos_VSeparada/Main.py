@@ -789,7 +789,7 @@ def register_user():
         messagebox.showinfo('Registro',('Exitoso!'))
 
 ################## LOGIN VERIFY SCREEN #################################
-def login_verify(self):
+def login_verify():
 
   global current_balance
   global username1
@@ -1061,7 +1061,7 @@ def login():
   password_entry1 = ttk.Entry(screen2,font = ("Lucida Console",14), textvariable = password_verify, justify = "center")
   password_entry1.config(show='●')
   password_entry1.place(x=860, y=350)
-  button_log = tk.Button(screen2,text = "Iniciar Sesión", background = '#663259', foreground = '#c2d5e3', width = "20", font = ("Lucida Console",14),command=lambda:[login_verify(self)])
+  button_log = tk.Button(screen2,text = "Iniciar Sesión", background = '#663259', foreground = '#c2d5e3', width = "20", font = ("Lucida Console",14),command=lambda:[login_verify()])
   button_log.place(x=860, y=430)
   password_entry1.bind('<Return>',login_verify)
 
